@@ -58,8 +58,11 @@ def main():
     if st.button("Respond"):
         prompt = f"Respond to this in German: {user_input}"
         response = model.predict(prompt)
+        promp2 = f"convert the German into english and Hindi: {response}"
+        response2 = model.predict(promp2)
         reply = response
         st.write(f"AI: {reply}")
+        st.write(f" {response2}")
 
 
 if __name__ == "__main__":
